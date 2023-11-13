@@ -33,9 +33,16 @@ export const dashboardTheme = createTheme({
         green: {
             main: "#00FF00",
         },
+        // THIS IS BEST COLOR
+        salmon: {
+            main: "#FA8072",
+        },
         // This is same color as error
         red: {
             main: "#FF0000",
+        },
+        vermilion: {
+            main: "#CB2821",
         },
         lightblue: {
             main: "#ADD8E6",
@@ -45,6 +52,48 @@ export const dashboardTheme = createTheme({
         },
         coffee: {
             main: "#6F4E37",
+        },
+        grey: {
+            main: "#696969",
+        },
+        anthracite: {
+            main: "#293133",
+        },
+        papyruswhite: {
+            main: "#CFD3CD",
+        },
+        rose: {
+            main: "#E63244",
+        },
+        signalorange: {
+            main: "#D84B20",
+        },
+        graphiteblack: {
+            main: "#1C1C1C",
+        },
+        trafficyellow: {
+            main: "#FAD201",
+        },
+        trafficorange: {
+            main: "#F54021",
+        },
+        nutbrown: {
+            main: "#5B3A29",
+        },
+        tomatored: {
+            main: "#A12312",
+        },
+        melonyellow: {
+            main: "#F4A900",
+        },
+        cream: {
+            main: "#FDF4E3",
+        },
+        trafficblue: {
+            main: "#063971",
+        },
+        stonegrey: {
+            main: "#8B8C7A",
         },
     },
     // https://mui.com/material-ui/customization/typography/

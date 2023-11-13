@@ -8,7 +8,7 @@ function App() {
         <Navbar/>
         <Outlet/>
     </Grid>
-  );
+  )
 }
 
 export default App;

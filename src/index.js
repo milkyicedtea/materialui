@@ -20,21 +20,27 @@ import Hosting from './pages/Hosting/Hosting';
 import Functions from './pages/Functions/Functions';
 import MachineLearning from './pages/MachineLearning/MachineLearning';
 import {dashboardTheme} from "./dashboardTheme";
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "./dev";
 
 ReactDOM.render(
     <ThemeProvider theme={dashboardTheme}>
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App/>}>
-                <Route path="authentication" element={<Authentication/>} />
-                <Route path="database" element={<Database />} />
-                <Route path="functions" element={<Functions />} />
-                <Route path="hosting" element={<Hosting />} />
-                <Route path="machine-learning" element={<MachineLearning />} />
-                <Route path="storage" element={<Storage />} />
-            </Route>
-        </Routes>
-    </BrowserRouter>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<DevSupport ComponentPreviews={ComponentPreviews}
+                                                     useInitialHook={useInitial}
+                >
+                    <App/>
+                </DevSupport>}>
+                    <Route path="authentication" element={<Authentication/>}/>
+                    <Route path="database" element={<Database/>}/>
+                    <Route path="functions" element={<Functions/>}/>
+                    <Route path="hosting" element={<Hosting/>}/>
+                    <Route path="machine-learning" element={<MachineLearning/>}/>
+                    <Route path="storage" element={<Storage/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
     </ThemeProvider>,
     document.getElementById('root')
 );

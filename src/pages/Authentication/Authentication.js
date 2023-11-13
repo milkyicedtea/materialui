@@ -2,53 +2,35 @@ import React from 'react'
 import Grid from '@mui/material/Grid'
 import CommonButton from "../../components/common/CommonButton/commonButton";
 import NotificationBell from "../../components/common/NotificationBell/NotificationBell";
+import BasicMenu from "../../components/common/BasicMenu/BasicMenu"
 
 const Authentication = () => {
-    // const buttonStyles = {
-    //     fontSize: '0.875rem',
-    //     fontWeight: 600,
-    //     textTransform: 'capitalize',
-    //     borderRadius: 2.5,
-    //     '&.MuiButton-contained': {
-    //         backgroundColor: '#009be5',
-    //         '&:hover': {
-    //             backgroundColor: '#006db3'
-    //         },
-    //     },
-    //     '&.MuiButton-outlined': {
-    //         color: "#fff",
-    //         borderColor: '#fff',
-    //         '&:hover': {
-    //             backgroundColor: 'blue'
-    //         },
-    //     },
-    // };
+    const [open, setOpen] = React.useState(false)
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleOpen = (event) => {
+        setAnchorEl(event.currentTarget)
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
 
     return (
         <Grid item xs={8}>
             This is authentication page.
-            <CommonButton
-                // sx={buttonStyles}
-                variant="contained"
-            >
-                Add user
-            </CommonButton>
-            <CommonButton
-                // sx={buttonStyles}
-                variant="outlined"
-            >
-                Web setup
-            </CommonButton>
-            <CommonButton
-                variant="contained"
-                color="primary"
-            >
-                Primary
-            </CommonButton>
             <NotificationBell
                 iconColor={'coffee'}
-                badgeContent={'0'}    //0 = No notifica
+                badgeContent={0}    //0 = No notifica, "0" = "Notifica 0"
                 badgeColor={'red'}
+                anchorEl={anchorEl}
+                onClick={handleOpen}
+            />
+            <BasicMenu
+                open={open}
+                anchorEl={anchorEl}
+                handleClose={handleClose}
             />
         </Grid>
     )
