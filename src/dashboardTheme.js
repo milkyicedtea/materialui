@@ -26,10 +26,26 @@ export const dashboardTheme = createTheme({
     },
     // https://mui.com/material-ui/customization/palette/
     palette: {
-        // Color palette to customize
+        // Color palette to customize or create
         // primary: {
         //     main: "#bada55",
         // }
+        green: {
+            main: "#00FF00",
+        },
+        // This is same color as error
+        red: {
+            main: "#FF0000",
+        },
+        lightblue: {
+            main: "#ADD8E6",
+        },
+        violet: {
+            main: "#5C3A93",
+        },
+        coffee: {
+            main: "#6F4E37",
+        },
     },
     // https://mui.com/material-ui/customization/typography/
     typography: {
