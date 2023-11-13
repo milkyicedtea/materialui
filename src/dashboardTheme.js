@@ -8,6 +8,16 @@ export const dashboardTheme = createTheme({
             styleOverrides: {
                 // Name of the slot
                 root: {
+                    fontSize: '0.875rem',
+                    fontWeight: 600,
+                    borderRadius: 8.5,
+                    '&.MuiButton-outlined': {
+                        color: '#FFFFFF',
+                        borderColor: '#FFFFFF',
+                        '&:hover': {
+                            backgroundColor: 'transparent'
+                        },
+                    },
                     // CSS
                     // fontSize: 'red!important',
                 },
@@ -17,9 +27,9 @@ export const dashboardTheme = createTheme({
     // https://mui.com/material-ui/customization/palette/
     palette: {
         // Color palette to customize
-        primary: {
-            main: "#bada55",
-        }
+        // primary: {
+        //     main: "#bada55",
+        // }
     },
     // https://mui.com/material-ui/customization/typography/
     typography: {
@@ -37,6 +47,6 @@ export const dashboardTheme = createTheme({
         ].join(','),
     },
     // https://mui.com/material-ui/customization/spacing/
-    spacing: [4, 8, 12, 16, 20]
+    // spacing: [4, 8, 12, 16, 20]
     // theme.spacing(4)
 })
