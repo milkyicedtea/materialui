@@ -14,7 +14,7 @@ import {ThemeProvider} from "@mui/material/styles";
 
 // Navbar routes
 import Authentication from "./pages/Authentication/Authentication";
-import Database from './pages/Database/Database';
+import Recipes from './pages/Recipes/Recipes';
 import Storage from './pages/Storage/Storage';
 import Hosting from './pages/Hosting/Hosting';
 import Functions from './pages/Functions/Functions';
@@ -33,7 +33,7 @@ ReactDOM.render(
                     <App/>
                 </DevSupport>}>
                     <Route path="authentication" element={<Authentication/>}/>
-                    <Route path="database" element={<Database/>}/>
+                    <Route path="database" element={<Recipes/>}/>
                     <Route path="functions" element={<Functions/>}/>
                     <Route path="hosting" element={<Hosting/>}/>
                     <Route path="machine-learning" element={<MachineLearning/>}/>

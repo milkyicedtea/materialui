@@ -6,14 +6,14 @@ export const navbarStyles = {
             width: 320,
             boxSizing: 'border-box',
             backgroundColor: '#101F33FF',
-            color: '#FFFFFFFF',
+            color: '#FFFFFF',
         },
         '& .Mui-selected': {
             color: 'red',
         },
     },
     icons: {
-        color: '#FFFFFFFF',
+        color: '#FFFFFF',
         marginLeft: '20px',
     },
     text: {

@@ -21,9 +21,10 @@ const Authentication = () => {
         <Grid item xs={8}>
             This is authentication page.
             <NotificationBell
-                iconColor={'coffee'}
-                badgeContent={0}    //0 = No notifica, "0" = "Notifica 0"
-                badgeColor={'red'}
+                iconColor={'lightblue'}
+                // textColor={}
+                badgeContent={'franco'}    //0 = No notifica, "0" = "Notifica 0"
+                badgeColor={'green'}
                 anchorEl={anchorEl}
                 onClick={handleOpen}
             />
