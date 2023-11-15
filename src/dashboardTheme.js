@@ -100,6 +100,13 @@ export const dashboardTheme = createTheme({
     },
     // https://mui.com/material-ui/customization/typography/
     typography: {
+        h1: {
+            fontSize: '1.6rem',
+            fontWeight: 600,
+            color: '#FFFFFF',
+            letterSpacing: '0.5',
+            textTransform: 'capitalize',
+        },
         fontFamily: [
             '-apple-system',
             'BlindMacSystemFont',

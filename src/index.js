@@ -26,20 +26,20 @@ import {ComponentPreviews, useInitial} from "./dev";
 ReactDOM.render(
     <ThemeProvider theme={dashboardTheme}>
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<DevSupport ComponentPreviews={ComponentPreviews}
-                                                     useInitialHook={useInitial}
-                >
-                    <App/>
-                </DevSupport>}>
-                    <Route path="authentication" element={<Authentication/>}/>
-                    <Route path="database" element={<Recipes/>}/>
-                    <Route path="functions" element={<Functions/>}/>
-                    <Route path="hosting" element={<Hosting/>}/>
-                    <Route path="machine-learning" element={<MachineLearning/>}/>
-                    <Route path="storage" element={<Storage/>}/>
-                </Route>
-            </Routes>
+        <Routes>
+            <Route path="/" element={<DevSupport ComponentPreviews={ComponentPreviews}
+                                                 useInitialHook={useInitial}
+            >
+                <App/>
+            </DevSupport>}>
+                <Route path="authentication" element={<Authentication/>}/>
+                <Route path="database" element={<Recipes/>}/>
+                <Route path="functions" element={<Functions/>}/>
+                <Route path="hosting" element={<Hosting/>}/>
+                <Route path="machine-learning" element={<MachineLearning/>}/>
+                <Route path="storage" element={<Storage/>}/>
+            </Route>
+        </Routes>
         </BrowserRouter>
     </ThemeProvider>,
     document.getElementById('root')

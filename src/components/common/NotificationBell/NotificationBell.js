@@ -3,25 +3,59 @@ import NotificationIcon from "@mui/icons-material/Notifications";
 import Badge from "@mui/material/Badge";
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
+import BasicMenu from "../BasicMenu/BasicMenu";
 
-const NotificationBell = ({iconColor, badgeContent, badgeColor, onClick, anchorEl}) => {
-    const newNotifications = `${badgeContent} FROCIO`
+const NotificationBell = ({iconColor, badgeColor}) => {
+
+    const notifications = [
+        {
+            id: 0,
+            label: 'Notification 1'
+        },
+        {
+            id: 1,
+            label: 'Notification 2'
+        },
+    ]
+
+    const [open, setOpen] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const newNotifications = `You have ${notifications.length} new notifications`
     const noNotification = 'Nessuno frocio'
+
+    const handleOpen = (event) => {
+        setAnchorEl(event.currentTarget)
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
-        <Tooltip title={badgeContent ? newNotifications : noNotification}>
-        <IconButton
-            color={iconColor}
-            onClick={onClick}
-            anchroEl={anchorEl}
-        >
-        <Badge
-            badgeContent={badgeContent}
-            color={badgeColor}
-        >
-            <NotificationIcon/>
-        </Badge>
-        </IconButton>
-        </Tooltip>
+        <div>
+            <Tooltip title={notifications.length ? newNotifications : noNotification}>
+                <IconButton
+                    color={iconColor}
+                    onClick={notifications.length ? handleOpen : null}
+                    anchroEl={anchorEl}
+                >
+                    <Badge
+                        badgeContent={notifications.length}
+                        color={badgeColor}
+                    >
+                        <NotificationIcon/>
+                    </Badge>
+                </IconButton>
+            </Tooltip>
+            <BasicMenu
+                open = {open}
+                anchorEl={anchorEl}
+                handleClose={handleClose}
+                menuItems={notifications}
+            />
+        </div>
     )
 }
 
