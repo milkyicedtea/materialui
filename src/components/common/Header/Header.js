@@ -23,11 +23,15 @@ const Header = ({title}) => {
                 badgeColor={'green'} // Tooltip color
             />
             <Avatar
-                src='https://i.ibb.co/KN9jghK/image.png'
+                src='https://i.pinimg.com/1200x/7a/31/68/7a31685c7b607f1a742658dc182e353c.jpg'
+                alt='Avatar'
                 variant='circular'
                 sx={{
-                    width: 50,
-                    height: 50,
+                    width: 75,
+                    height: 75,
+                    borderColor: "#FFFFFF",
+                    marginLeft: "5px",
+                    marginRight: "5px"
                 }}
             />
             </Box>

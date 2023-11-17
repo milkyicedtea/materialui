@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import BasicMenu from "../BasicMenu/BasicMenu";
 
-const NotificationBell = ({iconColor, badgeColor}) => {
+const NotificationBell = ({iconColor, badgeColor, sx=null}) => {
 
     const notifications = [
         {
@@ -39,7 +39,11 @@ const NotificationBell = ({iconColor, badgeColor}) => {
                 <IconButton
                     color={iconColor}
                     onClick={notifications.length ? handleOpen : null}
-                    anchroEl={anchorEl}
+                    anchorEl={anchorEl}
+                    sx={{
+                        marginLeft: "5px",
+                        marginRight: "10px"
+                    }}
                 >
                     <Badge
                         badgeContent={notifications.length}

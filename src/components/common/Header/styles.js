@@ -13,7 +13,7 @@ export const headerStyles = {
         alignItems: 'center',
         marginBottom: '20px',
         '*': {
-        marginRight: '5px',
+            // marginRight: '5px',
         },
     },
     middleRow: {
@@ -27,6 +27,8 @@ export const headerStyles = {
     link: {
         fontWeight: 500,
         color: '#FFFFFFB2',
+        marginLeft: "5px",
+        marginRight: "5px",
         "&:hover": {
             color: '#FFFFFF',
             cursor: 'pointer',
