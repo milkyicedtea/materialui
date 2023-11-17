@@ -32,16 +32,14 @@ export const headerStyles = {
         "&:hover": {
             color: '#FFFFFF',
             cursor: 'pointer',
-            },
+        },
     },
     webButton: {
         marginRight: '10px',
         height: '30px',
         backgroundColor: 'lightblue.main',
-        "&.text":{
+        "&.text": {
             color: 'lightblue.main'
         }
     },
 }
-
-export default headerStyles

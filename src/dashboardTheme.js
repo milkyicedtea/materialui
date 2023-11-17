@@ -1,4 +1,5 @@
 import {createTheme} from "@mui/material/styles";
+import "@fontsource/varela-round"
 
 export const dashboardTheme = createTheme({
     // https://mui.com/material-ui/customization/theming/
@@ -118,6 +119,10 @@ export const dashboardTheme = createTheme({
             '"Apple Color Emoji"',
             '"Segoe UI Emoji"',
             '"Segoe UI Symbol"',
+            "'Varela Round'",
+        ].join(','),
+        fontWeight: [
+            'bold'
         ].join(','),
     },
     // https://mui.com/material-ui/customization/spacing/

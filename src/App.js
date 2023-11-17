@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react'
 import Navbar from "./components/Navbar/Navbar"
 import {Outlet} from "react-router-dom"
 import Grid from '@mui/material/Grid'
-import Header from "./components/common/Header/Header";
 import {useLocation} from "react-router-dom";
-import {cleanup} from "@testing-library/react";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Header from "./components/common/Header/Header";
 
 function App() {
     const [title, setTitle] = useState(null)
@@ -17,8 +18,6 @@ function App() {
 
     return (
         <Grid container={true}>
-            <Navbar/>
-            <Header title={title}/>
             <Outlet/>
         </Grid>
     )

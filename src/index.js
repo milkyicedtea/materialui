@@ -12,13 +12,14 @@ import {
 
 import {ThemeProvider} from "@mui/material/styles";
 
-// Navbar routes
+// Pages routes
 import Authentication from "./pages/Authentication/Authentication";
 import Recipes from './pages/Recipes/Recipes';
 import Storage from './pages/Storage/Storage';
 import Hosting from './pages/Hosting/Hosting';
 import Functions from './pages/Functions/Functions';
 import MachineLearning from './pages/MachineLearning/MachineLearning';
+import Home from './pages/Home/Home'
 import {dashboardTheme} from "./dashboardTheme";
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
@@ -32,6 +33,7 @@ ReactDOM.render(
             >
                 <App/>
             </DevSupport>}>
+                <Route path="/" element={<Home/>}/>
                 <Route path="authentication" element={<Authentication/>}/>
                 <Route path="database" element={<Recipes/>}/>
                 <Route path="functions" element={<Functions/>}/>
