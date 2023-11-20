@@ -103,10 +103,14 @@ export const dashboardTheme = createTheme({
     typography: {
         h1: {
             fontSize: '1.6rem',
-            fontWeight: 600,
             color: '#FFFFFF',
-            letterSpacing: '0.5',
-            textTransform: 'capitalize',
+            letterSpacing: '2px',
+            // textTransform: 'capitalize',
+        },
+        h2: {
+            fontSize: '1.25rem',
+            color: '#FFFFFF',
+            letterSpacing: '0.5px'
         },
         fontFamily: [
             '-apple-system',

@@ -1,5 +1,4 @@
 import React from "react"
-import Grid from "@mui/material/Grid"
 import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
@@ -15,16 +14,24 @@ const Home = () => {
                 sx={{
                     width: 180,
                     height: 180,
-                    borderColor: "#FFFFFF",
                     marginTop: '2.5%'
                 }}
             />
             <Typography variant='h1' sx={homeStyles.welcomeText}>
                 Stay hydrated :)
             </Typography>
+            <Typography variant='h2' sx={homeStyles.introText}>
+                Small React app that i will to use to practice, keep my links and have my own cooking recipes in
+            </Typography>
+            <Box>
+                <Avatar
+                    src = 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
+                />
+            </Box>
+
         </Box>
 
-    )
+)
 }
 
 export default Home
