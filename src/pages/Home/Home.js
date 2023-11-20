@@ -3,6 +3,8 @@ import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
 import Typography from "@mui/material/Typography";
+import {Link} from 'react-router-dom'
+import {GitHub} from "@mui/icons-material";
 
 const Home = () => {
     return (
@@ -24,11 +26,14 @@ const Home = () => {
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
             </Typography>
             <Box>
-                <Avatar
-                    src = 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
-                />
+                <Link to='https://github.com/milkyicedtea'>
+                    <Avatar
+                        src={GitHub}
+                        variant='circular'
+                    />
+                    <GitHub/>
+                </Link>
             </Box>
-
         </Box>
 
 )
