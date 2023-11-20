@@ -8,6 +8,7 @@
     "@fontsource/varela-round": "^5.0.8",
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.17",
+    "@primer/octicons": "^19.8.0",
     "@primer/react": "^36.2.0",
     "@react-buddy/ide-toolbox": "^2.4.0",
     "@react-buddy/palette-mui": "^5.0.1",

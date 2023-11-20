@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography"
 import Tooltip from "@mui/material/Tooltip"
 import HelpIcon from "@mui/icons-material/Help"
 import Box from "@mui/material/Box"
-import {headerStyles} from './styles'
+import {headerStyles} from './headerStyles'
 
 const Header = ({title}) => {
     return (

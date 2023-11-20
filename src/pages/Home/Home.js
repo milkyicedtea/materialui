@@ -3,10 +3,13 @@ import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
 import Typography from "@mui/material/Typography";
-import {Link} from 'react-router-dom'
-import {GitHub} from "@mui/icons-material";
+import Link from '@mui/material/Link'
+import {Twitter} from "@mui/icons-material";
+import {YouTube} from "@mui/icons-material";
+import Github from "../../components/common/Icons/Github";
 
 const Home = () => {
+
     return (
         <Box sx={homeStyles.backgroundBox}>
             <Avatar
@@ -26,13 +29,32 @@ const Home = () => {
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
             </Typography>
             <Box>
-                <Link to='https://github.com/milkyicedtea'>
-                    <Avatar
-                        src={GitHub}
-                        variant='circular'
+                <Link href='https://github.com/milkyicedtea'>
+                    <Github
+                        sx={{
+                            height: '64',
+                            width: '64'
+                        }}
                     />
-                    <GitHub/>
                 </Link>
+                {/*<Link href='https://github.com/milkyicedtea'>*/}
+                {/*    <Twitter*/}
+                {/*        sx={{*/}
+                {/*            color: 'error.main',*/}
+                {/*            height: '64px',*/}
+                {/*            width: '64px'*/}
+                {/*        }}*/}
+                {/*    />*/}
+                {/*</Link>*/}
+                {/*<Link href='https://youtube.com/c/@Ignorance' target='_blank'>*/}
+                {/*    <YouTube*/}
+                {/*        sx={{*/}
+                {/*            color: 'main',*/}
+                {/*            height: '64px',*/}
+                {/*            width: '64px'*/}
+                {/*        }}*/}
+                {/*    />*/}
+                {/*</Link>*/}
             </Box>
         </Box>
 
