@@ -33,7 +33,7 @@ const Home = () => {
                     <Github
                         sx={{
                             height: '64',
-                            width: '64'
+                            width: '64',
                         }}
                     />
                 </Link>
