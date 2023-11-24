@@ -3,23 +3,35 @@ import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
 import Typography from "@mui/material/Typography";
-import {Image} from "@mui/icons-material";
-import CardMedia from "@mui/material/CardMedia"
+import Image from "mui-image";
+import {dashboardTheme} from "../../dashboardTheme";
 
-const handleClickGithub = () => {
-    window.location.assign("https://github.com/milkyicedtea")
-}
-
-const handleClickYoutube = () => {
-    window.location.assign("https://github.com/milkyicedtea")
-}
-
-const handleClickTwitter = () => {
-    window.location.assign("https://twitter.com/ignoranceuwu")
-}
-
-const handleClickOsu = () => {
-    window.location.assign("https://osu.ppy.sh/users/20178628")
+const links = {
+    Github: {
+        id: 'Github',
+        src: 'https://i.ibb.co/mzWdMWK/github-mark-white.png',
+        handleClick:() => {
+            window.location.assign("https://github.com/milkyicedtea");
+        },
+    },
+    Youtube: {
+        id: 'Youtube',
+        src: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
+        handleClick:() => {
+            window.location.assign("https://youtube.com/c/@Ignorance");
+        }
+    },
+    Osu: {
+        id: 'Osu',
+        src: '',
+    },
+    Twitter: {
+        id: 'Twitter',
+        src: '',
+        handleClick:() => {
+            window.location.assign("https://twitter.com/ignorancespam");
+        }
+    }
 }
 
 const handleClickTwitch = () => {
@@ -40,35 +52,23 @@ const Home = () => {
                     marginTop: '2.5%'
                 }}
             />
-            <Typography variant='h1' sx={homeStyles.welcomeText}>
+            <Typography sx={homeStyles.welcomeText}>
                 Stay hydrated :)
             </Typography>
-            <Typography variant='h2' sx={homeStyles.introText}>
+            <Typography sx={homeStyles.introText}>
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
             </Typography>
-            <Box>
-                <Avatar
-                    src="https://i.ibb.co/mzWdMWK/github-mark-white.png"
-                    alt='Github'
-                    onClick={() => {
-                        handleClickGithub();
-                    }}
-                />
-                <CardMedia
+            <Box sx={homeStyles.linkBox}>
+                <Box
+                    component="img"
                     sx={{
-                        height: "32px",
-                        width: "32px",
-                    }}
-                    alt='Github'
-                    variant='rounded'
-                    onClick={() => {
-                        handleClickYoutube();
-                    }}
-                >
-                    <img
-                        alt="Youtube"
-                        src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"/>
-                </CardMedia>
+                        height: 48,
+                        width: 48,
+                      }}
+                    alt="The house from the offer."
+                    src={links['Github'].src}
+                    onClick={() => links['Github'].handleClick()}
+                />
             </Box>
         </Box>
 

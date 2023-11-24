@@ -7,9 +7,17 @@ export const homeStyles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minHeight: '100%'
+        // minHeight: '100%'
+    },
+    linkBox: {
+        alignItems: 'center',
+        // textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        // width: '100vh'
     },
     welcomeText: {
+        fontSize: '1.6rem',
         fontFamily: 'Varela Round',
         fontStyle: 'normal',
         fontWeight: '600',
@@ -19,6 +27,7 @@ export const homeStyles = {
         alignSelf: 'center'
     },
     introText: {
+        fontSize: '1.25rem',
         fontFamily: 'Varela Round',
         fontStyle: 'normal',
         fontWeight: '400',
