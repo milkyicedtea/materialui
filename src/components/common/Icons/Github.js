@@ -1,22 +1,24 @@
-import Icon from "@mui/material/Icon"
-import {makeStyles} from "@mui/styles"
+import SvgIcon from "@mui/material/SvgIcon"
+import GithubIcon from "public/github-mark/github-mark-white.svg"
 
-const iconStyles = makeStyles({
-    imageIcon: {
-        width: 'inherit',
-        height: 'inherit',
-        display:'flex'
-    },
-    iconRoot: {
-        textAlign: 'center'
-    }
-})
+// const iconStyles = styled({
+//     imageIcon: {
+//         width: 'inherit',
+//         height: 'inherit',
+//         display:'flex'
+//     },
+//     iconRoot: {
+//         textAlign: 'center'
+//     }
+// })
 
 const Github = () => {
     return (
-        <Icon classes={iconStyles.iconRoot}>
-            <img className={iconStyles.imageIcon} src={"../../../../public/github-mark/github-mark-white.svg"}/>
-        </Icon>
+        <SvgIcon
+            component={GithubIcon}
+            viewBox="0 0 600 476.6"
+        >
+        </SvgIcon>
     )
 }
 

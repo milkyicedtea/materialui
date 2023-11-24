@@ -3,10 +3,28 @@ import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
 import Typography from "@mui/material/Typography";
-import Link from '@mui/material/Link'
-import {Twitter} from "@mui/icons-material";
-import {YouTube} from "@mui/icons-material";
-import Github from "../../components/common/Icons/Github";
+import {Image} from "@mui/icons-material";
+import CardMedia from "@mui/material/CardMedia"
+
+const handleClickGithub = () => {
+    window.location.assign("https://github.com/milkyicedtea")
+}
+
+const handleClickYoutube = () => {
+    window.location.assign("https://github.com/milkyicedtea")
+}
+
+const handleClickTwitter = () => {
+    window.location.assign("https://twitter.com/ignoranceuwu")
+}
+
+const handleClickOsu = () => {
+    window.location.assign("https://osu.ppy.sh/users/20178628")
+}
+
+const handleClickTwitch = () => {
+    window.location.assign("https://twitch.tv/strxwberryice")
+}
 
 const Home = () => {
 
@@ -29,32 +47,28 @@ const Home = () => {
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
             </Typography>
             <Box>
-                <Link href='https://github.com/milkyicedtea'>
-                    <Github
-                        sx={{
-                            height: '64',
-                            width: '64',
-                        }}
-                    />
-                </Link>
-                {/*<Link href='https://github.com/milkyicedtea'>*/}
-                {/*    <Twitter*/}
-                {/*        sx={{*/}
-                {/*            color: 'error.main',*/}
-                {/*            height: '64px',*/}
-                {/*            width: '64px'*/}
-                {/*        }}*/}
-                {/*    />*/}
-                {/*</Link>*/}
-                {/*<Link href='https://youtube.com/c/@Ignorance' target='_blank'>*/}
-                {/*    <YouTube*/}
-                {/*        sx={{*/}
-                {/*            color: 'main',*/}
-                {/*            height: '64px',*/}
-                {/*            width: '64px'*/}
-                {/*        }}*/}
-                {/*    />*/}
-                {/*</Link>*/}
+                <Avatar
+                    src="https://i.ibb.co/mzWdMWK/github-mark-white.png"
+                    alt='Github'
+                    onClick={() => {
+                        handleClickGithub();
+                    }}
+                />
+                <CardMedia
+                    sx={{
+                        height: "32px",
+                        width: "32px",
+                    }}
+                    alt='Github'
+                    variant='rounded'
+                    onClick={() => {
+                        handleClickYoutube();
+                    }}
+                >
+                    <img
+                        alt="Youtube"
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"/>
+                </CardMedia>
             </Box>
         </Box>
 
