@@ -34,6 +34,7 @@ ReactDOM.render(
                 <App/>
             </DevSupport>}>
                 <Route path="/" element={<Home/>}/>
+                <Route path="home" element={<Home/>}/>
                 <Route path="authentication" element={<Authentication/>}/>
                 <Route path="database" element={<Recipes/>}/>
                 <Route path="functions" element={<Functions/>}/>

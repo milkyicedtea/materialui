@@ -1,47 +1,43 @@
-import React from "react"
+import React, {useRef} from "react"
 import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import {homeStyles} from "./homeStyles";
 import Typography from "@mui/material/Typography";
-import Image from "mui-image";
-import {dashboardTheme} from "../../dashboardTheme";
+import Container from "@mui/material/Container"
 
-const links = {
-    Github: {
-        id: 'Github',
-        src: 'https://i.ibb.co/mzWdMWK/github-mark-white.png',
-        handleClick:() => {
-            window.location.assign("https://github.com/milkyicedtea");
-        },
-    },
-    Youtube: {
-        id: 'Youtube',
-        src: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
-        handleClick:() => {
-            window.location.assign("https://youtube.com/c/@Ignorance");
-        }
-    },
-    Osu: {
-        id: 'Osu',
-        src: '',
-    },
-    Twitter: {
-        id: 'Twitter',
-        src: '',
-        handleClick:() => {
-            window.location.assign("https://twitter.com/ignorancespam");
-        }
-    }
-}
 
-const handleClickTwitch = () => {
-    window.location.assign("https://twitch.tv/strxwberryice")
-}
+import Github from "../../components/common/Icons/Github";
+import Twitter from "../../components/common/Icons/Twitter";
+import Osu from "../../components/common/Icons/Osu"
+import Twitch from "../../components/common/Icons/Twitch";
+import Youtube from "../../components/common/Icons/Youtube";
+import DrawerAppBar from "../../components/common/DrawerBar/DrawerBar";
 
 const Home = () => {
 
+    function useClientRect() {
+  const [rect, setRect] = React.useState(null);
+  const ref = React.useCallback(node => {
+    if (node !== null) {
+      setRect(node.getBoundingClientRect());
+    }
+  }, []);
+  return [rect, ref];
+}
+
+    const [rect, ref] = useClientRect()
+
     return (
-        <Box sx={homeStyles.backgroundBox}>
+    <Box>
+        <Box
+            ref={ref}
+            sx={{marginBottom: '10%px'}}
+        >
+            <DrawerAppBar/>
+        </Box>
+        <Box
+            sx={homeStyles.backgroundBox}
+        >
             <Avatar
                 src='https://i.pinimg.com/1200x/7a/31/68/7a31685c7b607f1a742658dc182e353c.jpg'
                 alt='Avatar'
@@ -57,22 +53,83 @@ const Home = () => {
             </Typography>
             <Typography sx={homeStyles.introText}>
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
+                {rect !== null && (
+                    <h2>
+                        {Math.round(rect.height)}
+                    </h2>
+                )}
             </Typography>
             <Box sx={homeStyles.linkBox}>
-                <Box
-                    component="img"
+                <Twitter
                     sx={{
-                        height: 48,
-                        width: 48,
-                      }}
-                    alt="The house from the offer."
-                    src={links['Github'].src}
-                    onClick={() => links['Github'].handleClick()}
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                        maxWidth: '48px',
+                        cursor: 'pointer'
+                    }}
+                />
+                <Github
+                    sx={{
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                        maxWidth: '48px',
+                        cursor: 'pointer'
+                    }}
+                />
+                <Youtube
+                    sx={{
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                        maxWidth: '48px',
+                        cursor: 'pointer'
+                    }}
+                />
+                <Osu
+                    sx={{
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                        maxWidth: '48px',
+                        cursor: 'pointer'
+                    }}
+                />
+                <Twitch
+                    sx = {{
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                        maxWidth: '48px',
+                        cursor: 'pointer'
+                    }}
                 />
             </Box>
+            <Box
+                sx={{
+                    marginTop: 'auto',
+                }}
+            >
+                <Container maxWidth="sm"
+                    sx={{
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Typography sx={homeStyles.footer}>
+                        Made with ❤ by ignorance
+                    </Typography>
+                    <Typography
+                        sx={homeStyles.credits}
+                        onClick={() => {
+                            window.location.assign('/Credits')
+                        }}
+                    >
+                        Credits
+                    </Typography>
+                </Container>
+            </Box>
+            <Box sx={{height: '5vh'}}/> {/*This is literally just for the footer to be up*/}
         </Box>
-
-)
+    </Box>
+    )
 }
 
 export default Home
