@@ -4,26 +4,26 @@ import "@fontsource/varela-round"
 export const dashboardTheme = createTheme({
     // https://mui.com/material-ui/customization/theming/
     components: {
-        // Name of the component
-        MuiButton: {
-            styleOverrides: {
-                // Name of the slot
-                root: {
-                    fontSize: '0.875rem',
-                    fontWeight: 600,
-                    borderRadius: 8.5,
-                    '&.MuiButton-outlined': {
-                        color: '#FFFFFF',
-                        borderColor: '#FFFFFF',
-                        '&:hover': {
-                            backgroundColor: 'transparent'
-                        },
-                    },
-                    // CSS
-                    // fontSize: 'red!important',
-                },
-            },
-        },
+        // // Name of the component
+        // MuiButton: {
+        //     styleOverrides: {
+        //         // Name of the slot
+        //         root: {
+        //             fontSize: '0.875rem',
+        //             fontWeight: 600,
+        //             borderRadius: 8.5,
+        //             '&.MuiButton-outlined': {
+        //                 color: '#FFFFFF',
+        //                 borderColor: '#FFFFFF',
+        //                 '&:hover': {
+        //                     backgroundColor: 'transparent'
+        //                 },
+        //             },
+        //             // CSS
+        //             // fontSize: 'red!important',
+        //         },
+        //     },
+        // },
         // https://mui.com/material-ui/customization/palette/
         palette: {
             // Color palette to customize or create

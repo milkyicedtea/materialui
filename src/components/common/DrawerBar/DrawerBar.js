@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +14,7 @@ import MenuRounded from '@mui/icons-material/MenuRounded';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import {Icon} from "@mui/material";
 
 // function useClientRect() {
 //   const [rect, setRect] = React.useState(null);
@@ -41,7 +43,10 @@ export default function DrawerAppBar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle}
-             sx={{textAlign: 'center'}}
+             sx={{
+                 textAlign: 'center',
+                 backgroundColor: '#6F4E37'
+            }}
         >
             <Typography variant='h6'
                         sx={{marginY: 2}}
@@ -64,28 +69,30 @@ export default function DrawerAppBar(props) {
     const container = window !== undefined ? () => window().document.body : undefined
 
     return (
-        <Box sx={{display: 'flex'}}
+        <Box sx={{display: 'flex',
+            // color: '#6F4E37'
+        }}
             // ref={ref}
         >
-            <CssBaseline/>
-            <AppBar component='nav'>
+            <AppBar component='nav'
+                sx={{
+                    // color: '#6F4E37'
+                }}>
                 <Toolbar>
-                    <IconButton
+                    <Icon
                         aria-label='open drawer'
                         edge='start'
                         onClick={handleDrawerToggle}
                         sx={{
                             marginRight: 2,
+                            color: 'tomatored.main',
                             display: {
                                 sm: 'none'
-                            },
+                            }
                         }}
-                        color='yellowtraffic.main'
                     >
-                        <MenuRounded
-                            // color='red'
-                        />
-                    </IconButton>
+                        <MenuRounded/>
+                    </Icon>
                     <Typography
                         variant='h6'
                         component='div'
@@ -111,7 +118,7 @@ export default function DrawerAppBar(props) {
                             <Button
                                 key={item}
                                 sx={{
-                                    color: '#FFFFFF'
+
                                 }}
                             >
                                 {item}
