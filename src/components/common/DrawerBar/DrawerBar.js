@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,15 +9,28 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuRounded from '@mui/icons-material/MenuRounded';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+// function useClientRect() {
+//   const [rect, setRect] = React.useState(null);
+//   const ref = React.useCallback(node => {
+//     if (node !== null) {
+//       setRect(node.getBoundingClientRect());
+//     }
+//   }, []);
+//   return [rect, ref];
+// }
+//
+// const [rect, ref] = useClientRect()
+
 const drawerWidth = 240
 const navItems = ['Home', 'About', 'Contacts']
 
-function DrawerAppBar(props) {
+export default function DrawerAppBar(props) {
+
     const {window} = props
     const [mobileOpen, setMobileOpen] = React.useState(false)
 
@@ -31,7 +43,7 @@ function DrawerAppBar(props) {
         <Box onClick={handleDrawerToggle}
              sx={{textAlign: 'center'}}
         >
-            <Typography variant = 'h6'
+            <Typography variant='h6'
                         sx={{marginY: 2}}
             >
                 MUI
@@ -49,15 +61,16 @@ function DrawerAppBar(props) {
         </Box>
     )
 
-    const container = window !== undefined? () => window().document.body : undefined
+    const container = window !== undefined ? () => window().document.body : undefined
 
     return (
-        <Box sx={{display: 'flex'}}>
+        <Box sx={{display: 'flex'}}
+            // ref={ref}
+        >
             <CssBaseline/>
             <AppBar component='nav'>
                 <Toolbar>
                     <IconButton
-                        color='error.main'
                         aria-label='open drawer'
                         edge='start'
                         onClick={handleDrawerToggle}
@@ -65,9 +78,13 @@ function DrawerAppBar(props) {
                             marginRight: 2,
                             display: {
                                 sm: 'none'
-                            }
+                            },
                         }}
+                        color='yellowtraffic.main'
                     >
+                        <MenuRounded
+                            // color='red'
+                        />
                     </IconButton>
                     <Typography
                         variant='h6'
@@ -95,7 +112,7 @@ function DrawerAppBar(props) {
                                 key={item}
                                 sx={{
                                     color: '#FFFFFF'
-                            }}
+                                }}
                             >
                                 {item}
                             </Button>
@@ -129,5 +146,3 @@ function DrawerAppBar(props) {
         </Box>
     )
 }
-
-export default DrawerAppBar

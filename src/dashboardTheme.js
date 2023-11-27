@@ -27,9 +27,9 @@ export const dashboardTheme = createTheme({
         // https://mui.com/material-ui/customization/palette/
         palette: {
             // Color palette to customize or create
-            // primary: {
-            //     main: "#bada55",
-            // }
+            primary: {
+                main: "#bada55",
+            },
             tomatored: {
                 main: "#A12312",
             },

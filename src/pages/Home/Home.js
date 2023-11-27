@@ -15,22 +15,9 @@ import DrawerAppBar from "../../components/common/DrawerBar/DrawerBar";
 
 const Home = () => {
 
-    function useClientRect() {
-  const [rect, setRect] = React.useState(null);
-  const ref = React.useCallback(node => {
-    if (node !== null) {
-      setRect(node.getBoundingClientRect());
-    }
-  }, []);
-  return [rect, ref];
-}
-
-    const [rect, ref] = useClientRect()
-
     return (
     <Box>
         <Box
-            ref={ref}
             sx={{marginBottom: '10%px'}}
         >
             <DrawerAppBar/>
@@ -53,11 +40,11 @@ const Home = () => {
             </Typography>
             <Typography sx={homeStyles.introText}>
                 Small React app that i will to use to practice, keep my links and have my own cooking recipes in
-                {rect !== null && (
-                    <h2>
-                        {Math.round(rect.height)}
-                    </h2>
-                )}
+                {/*{rect !== null && (*/}
+                {/*    <h2>*/}
+                {/*        {Math.round(rect.height)}*/}
+                {/*    </h2>*/}
+                {/*)}*/}
             </Typography>
             <Box sx={homeStyles.linkBox}>
                 <Twitter
