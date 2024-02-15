@@ -33,14 +33,14 @@ ReactDOM.render(
             >
                 <App/>
             </DevSupport>}>
-                <Route path="/" element={<Home/>}/>
-                <Route path="home" element={<Home/>}/>
-                <Route path="authentication" element={<Authentication/>}/>
-                <Route path="database" element={<Recipes/>}/>
-                <Route path="functions" element={<Functions/>}/>
-                <Route path="hosting" element={<Hosting/>}/>
-                <Route path="machine-learning" element={<MachineLearning/>}/>
-                <Route path="storage" element={<Storage/>}/>
+                {/*<Route path="/" element={<Home/>}/>*/}
+                <Route path="/home" element={<Home/>}/>
+                <Route path="/authentication" element={<Authentication/>}/>
+                <Route path="/database" element={<Recipes/>}/>
+                <Route path="/functions" element={<Functions/>}/>
+                <Route path="/hosting" element={<Hosting/>}/>
+                <Route path="/machine-learning" element={<MachineLearning/>}/>
+                <Route path="/storage" element={<Storage/>}/>
             </Route>
         </Routes>
         </BrowserRouter>
